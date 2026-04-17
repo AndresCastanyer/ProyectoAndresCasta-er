@@ -51,3 +51,20 @@ class StockProducte {
     public Producte getProducte() { return producte; }
     public void decrementa(int q) { this.quantitat -= q; }
 }
+// Enumerado para las marcas limitadas [cite: 41]
+public enum Marca {
+    PepeWear, LaCostera, Flor_del_taronger
+}
+
+// Excepciones personalizadas [cite: 58, 72, 93]
+class CanNotMergeBrandsException extends RuntimeException {
+    public CanNotMergeBrandsException(String msg) { super(msg); }
+}
+
+class NotExistEnougthItemException extends RuntimeException {
+    public NotExistEnougthItemException(String msg) { super(msg); }
+}
+
+class ShowRoomNotOpenException extends Exception {
+    public ShowRoomNotOpenException(String msg) { super(msg); }
+}
